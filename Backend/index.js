@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 //Wildcard route, must stay at the bottom or it will override
 app.get('*', (req, res) => {
-    res.status(404).send('<h1>404 Page</h1>')
+    res.render('error404')
 })
 
 app.listen(process.env.PORT)
