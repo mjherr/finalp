@@ -1,9 +1,12 @@
 //Dependencies
-require('dotenv').config()
+require('./Backend/node_modules/dotenv/lib/main').config()
 const express = require('express')
 const app = express()
 
 //Routes
+
+app.use('/cards', require('./controllers/cards'))
+
 app.get('/', (req, res) => {
     res.send('Hello World')
 })
